@@ -124,9 +124,6 @@ end
 ---@param opts ContainerRunOpts Additional options including callbacks
 function M:run(image, opts)
   local command = { "run", "-i", "-d" }
-  if opts.autoremove ~= false then
-    table.insert(command, "--rm")
-  end
 
   vim.list_extend(command, opts.args or {})
 
