@@ -123,7 +123,7 @@ end
 ---@param image string image to run
 ---@param opts ContainerRunOpts Additional options including callbacks
 function M:run(image, opts)
-  local command = { "run", "-i", "-d" }
+  local command = { "run", "-d" }
 
   vim.list_extend(command, opts.args or {})
 
